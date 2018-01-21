@@ -1,0 +1,42 @@
+[
+    {
+        "url": "http://www.google.com",
+        "status_code": 200,
+        "server": "gws",
+        "content_type": "application/json",
+        "via": "www-cache1.uusi.oulu.fi",
+        "must_contain": ["Google", "Hello, world!", "Hello, world"],
+        "should_contain": ["Hello, world!!", "Hello, world!", "Hello, world"],
+        "may_contain": ["Hello, world!!", "Hello, world!", "Hello, world"]
+    },
+    {
+        "url": "www.hotmail.com",
+        "status_code": 200,
+        "server": "gws",
+        "content_type": "application/json",
+        "via": "www-cache1.uusi.oulu.fi",
+        "must_contain": ["Outlook", "Microsoft", "outlook"],
+        "should_contain": ["SignIn", "Hello, world!", "Hello, world"],
+        "may_contain": ["Hello, world!!", "Hello, world!", "Hello, world"]
+    },
+    {
+        "url": "www.f-secure.com/en/f-secure",
+        "status_code": 200,
+        "server": "gws",
+        "content_type": "application/json",
+        "via": "www-cache1.uusi.oulu.fi",
+        "must_contain": ["F-secure", "f-secure", "F-Secure"],
+        "should_contain": ["Hello, world!!", "Hello, world!", "Hello, world"],
+        "may_contain": ["Hello, world!!", "Hello, world!", "Hello, world"]
+    },
+    {
+        "url": "https://www.tieto.com",
+        "status_code": 200,
+        "server": "gws",
+        "content_type": "application/json",
+        "via": "www-cache1.uusi.oulu.fi",
+        "must_contain": ["Tieto", "Hello, world!", "Hello, world"],
+        "should_contain": ["Hello, world!!", "Hello, world!", "Hello, world"],
+        "may_contain": ["Hello, world!!", "Hello, world!", "Hello, world"]
+    }
+]

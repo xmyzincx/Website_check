@@ -1,0 +1,97 @@
+{
+    "RTT": 0.163, 
+    "content_type_check": false, 
+    "may_contain_check": [
+        false, 
+        false, 
+        false
+    ], 
+    "must_contain_check": [
+        true, 
+        false, 
+        false
+    ], 
+    "redirect_url": "http://www.google.fi/?gfe_rd=cr&dcr=0&ei=0N5kWt6cNtKwX9yctPAI", 
+    "server_check": true, 
+    "should_contain_check": [
+        false, 
+        false, 
+        false
+    ], 
+    "status_code": 200, 
+    "status_code_check": true, 
+    "url_check": true, 
+    "via_check": false
+}{
+    "RTT": 0.431, 
+    "content_type_check": false, 
+    "may_contain_check": [
+        false, 
+        false, 
+        false
+    ], 
+    "must_contain_check": [
+        true, 
+        true, 
+        true
+    ], 
+    "redirect_url": "https://outlook.live.com/owa/", 
+    "server_check": false, 
+    "should_contain_check": [
+        true, 
+        false, 
+        false
+    ], 
+    "status_code": 200, 
+    "status_code_check": true, 
+    "url_check": true, 
+    "via_check": false
+}{
+    "RTT": 0.37, 
+    "content_type_check": false, 
+    "may_contain_check": [
+        false, 
+        false, 
+        false
+    ], 
+    "must_contain_check": [
+        true, 
+        false, 
+        false
+    ], 
+    "redirect_url": "https://www.tieto.com", 
+    "server_check": false, 
+    "should_contain_check": [
+        false, 
+        false, 
+        false
+    ], 
+    "status_code": 200, 
+    "status_code_check": true, 
+    "url_check": true, 
+    "via_check": false
+}{
+    "RTT": 2.088, 
+    "content_type_check": false, 
+    "may_contain_check": [
+        false, 
+        false, 
+        false
+    ], 
+    "must_contain_check": [
+        false, 
+        true, 
+        true
+    ], 
+    "redirect_url": "https://www.f-secure.com/en/f-secure", 
+    "server_check": false, 
+    "should_contain_check": [
+        false, 
+        false, 
+        false
+    ], 
+    "status_code": 200, 
+    "status_code_check": true, 
+    "url_check": true, 
+    "via_check": false
+}
