@@ -4,9 +4,8 @@ import os
 import sys
 from multiprocessing.dummy import Pool as ThreadPool
 import threading
-from website_analyzer import analyze
+import website_analyzer
 import time
-
 
 # Defining the field for data integrity.
 # This is to keep the integrity between the config
@@ -30,11 +29,15 @@ thread_pool_size = 2
 # Checking interval in milliseconds
 checking_interval = 1000
 
-# Number of times the whole test will run
-number_of_hits = 1
+# Number of times the whole test will run.
+# Set to zero for monitor contineously
+number_of_hits = 0
 
 # Path to config.json file
 config_file_path = "config.json"
+
+# Enable Logging. Make it False to diable logging.
+log = False
 
 urls_dict = []
 
@@ -63,15 +66,20 @@ if __name__ == '__main__':
         urls_dict.append(url_reqrmnt)
         #print(url_reqrmnt)
 
-    for i in range(0, number_of_hits):
+    if number_of_hits > 0:
+        for i in range(0, number_of_hits):
+            threads_pool = ThreadPool(thread_pool_size)
+            threads_pool.map(website_analyzer.analyze, urls_dict)
+            threads_pool.close
+            threads_pool.join
+            time.sleep(checking_interval/1000)
+    else:
+        while True:
+            threads_pool = ThreadPool(thread_pool_size)
+            threads_pool.map(website_analyzer.analyze, urls_dict)
+            threads_pool.close
+            threads_pool.join
+            time.sleep(checking_interval/1000)
 
-        threads_pool = ThreadPool(thread_pool_size)
-
-        threads_pool.map(analyze, urls_dict)
-
-        threads_pool.close
-        threads_pool.join
-
-        time.sleep(checking_interval/1000)
 
         

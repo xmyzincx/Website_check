@@ -2,6 +2,7 @@ import json
 from urlparse import urlparse
 import urllib2
 import time
+import website_monitor
 
 RES_FIELDS = [
     "url_check",
@@ -16,6 +17,7 @@ RES_FIELDS = [
     "redirect_url",
     "RTT"
 ]
+
 
 resp_dict = {}
 resp_dict.fromkeys(RES_FIELDS)
@@ -58,6 +60,8 @@ def analyze(website_reqrmnt):
         else:
             resp_dict['status_code_check'] = False
         resp_dict['status_code'] = http_code
+        
+        print "URL: {}, Status code: {}, RTT(ms): {}".format(url, http_code, rtt_ms)
 
         # Server name check
         if website_reqrmnt.get('server') == headers.get('server'):
@@ -119,7 +123,8 @@ def analyze(website_reqrmnt):
         print('Failed to reach server.')
         print('Reason: ', eURL.reason)
 
-    with open('results.json', 'a') as fp:
-        json.dump(resp_dict, fp, sort_keys=True, indent=4)
+    if website_monitor.log:
+        with open('results.json', 'a') as fp:
+            json.dump(resp_dict, fp, sort_keys=True, indent=4)
 
     return resp_dict
