@@ -35,8 +35,7 @@ You can set your requirements for a website in "config.json" present in the pare
     "should_contain": Array of strings you want to search,
     "may_contain": Array of strings you want to search
 
-Example:
-
+Example (Also avilable with the code):
     "url": "http://www.google.com",
     "status_code": 200,
     "server": "gws",
