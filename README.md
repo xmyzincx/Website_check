@@ -12,6 +12,7 @@ You can configure the script if following ways:
 * Define the polling interval by changing "checking_interval" parameter in "website_monitor.py". It is time in Milliseconds and default is 1000ms.
 * Number of hits you want to make to the websites by changing "number_of_hits" parameter in "website_monitor.py". Default is 0 which will continue testing the sites until the user stops the script.
 * Enable or disable logging output to the file. You can enable or diable by changing "log" parameter in "website_monitor.py". If enable, this will create a results.JSON file in the same directory with the following fields.
+    ```
     "url_check" : Boolean,
     "status_code_check" : Boolean,
     "status_code" : HTTP response code,
@@ -23,6 +24,7 @@ You can configure the script if following ways:
     "may_contain_check" : Array of type booleans,
     "redirect_url" : URL if redirected (Proxy),
     "RTT" : Round trip time in milliseconds
+    ```
 
 ## Content requirements configuration file
 You can set your requirements for a website in "config.json" present in the parent directory. Bare in mind that these are the requirements for the website response. Notable parameters in this config file:
