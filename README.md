@@ -8,10 +8,10 @@ This script was built using Python 2.7 and is not tested on later versions. Most
 
 ## Configuration
 You can configure the script if following ways:
-1- Define the number of thread workers by changing "thread_pool_size" parameter in "website_monitor.py". By-default is 2.
-2- Define the polling interval by changing "checking_interval" parameter in "website_monitor.py". It is time in Milliseconds and default is 1000ms.
-3- Number of hits you want to make to the websites by changing "number_of_hits" parameter in "website_monitor.py". Default is 0 which will continue testing the sites until the user stops the script.
-4- Enable or disable logging output to the file. You can enable or diable by changing "log" parameter in "website_monitor.py". If enable, this will create a results.JSON file in the same directory with the following fields.
+*- Define the number of thread workers by changing "thread_pool_size" parameter in "website_monitor.py". By-default is 2.
+*- Define the polling interval by changing "checking_interval" parameter in "website_monitor.py". It is time in Milliseconds and default is 1000ms.
+*- Number of hits you want to make to the websites by changing "number_of_hits" parameter in "website_monitor.py". Default is 0 which will continue testing the sites until the user stops the script.
+*- Enable or disable logging output to the file. You can enable or diable by changing "log" parameter in "website_monitor.py". If enable, this will create a results.JSON file in the same directory with the following fields.
     "url_check" : Boolean,
     "status_code_check" : Boolean,
     "status_code" : HTTP response code,
@@ -35,7 +35,8 @@ You can set your requirements for a website in "config.json" present in the pare
     "should_contain": Array of strings you want to search,
     "may_contain": Array of strings you want to search
 
-Example (Also avilable with the code):
+### Example (Also avilable with the code):
+    ```
     "url": "http://www.google.com",
     "status_code": 200,
     "server": "gws",
@@ -44,6 +45,7 @@ Example (Also avilable with the code):
     "must_contain": ["Google", "Hello, world!", "Hello, world"],
     "should_contain": ["Hello, world!!", "Hello, world!", "Hello, world"],
     "may_contain": ["Hello, world!!", "Hello, world!", "Hello, world"]
+    ```
 
 ## Running the script
 
