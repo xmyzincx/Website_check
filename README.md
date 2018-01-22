@@ -28,15 +28,16 @@ You can configure the script if following ways:
 
 ## Content requirements configuration file
 You can set your requirements for a website in "config.json" present in the parent directory. Bare in mind that these are the requirements for the website response. Notable parameters in this config file:
+###
     ```
-    * "url": URL or Website address,
-    * "status_code": HTTP response code,
-    * "server": Server name,
-    * "content_type": Content type of the response,
-    * "via": Check if the response is coming via proxy server,
-    * "must_contain": Array of strings you want to search,
-    * "should_contain": Array of strings you want to search,
-    * "may_contain": Array of strings you want to search
+    "url": URL or Website address,
+    "status_code": HTTP response code,
+    "server": Server name,
+    "content_type": Content type of the response,
+    "via": Check if the response is coming via proxy server,
+    "must_contain": Array of strings you want to search,
+    "should_contain": Array of strings you want to search,
+    "may_contain": Array of strings you want to search
     ```
 
 ### Example (Also avilable with the code):
