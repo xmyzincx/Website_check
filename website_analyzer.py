@@ -83,11 +83,13 @@ def analyze(website_reqrmnt):
         resp_dict['redirect_url'] = redirect_url
 
         # String contain checks
-        # This can be done in two ways, one using BeautifulSoup
+        # This can be done in several ways, one using BeautifulSoup
         # and other is using normal python if condition for
         # string search e.g if substring in string.
+        # Secondly, the most famous way is to use regex (Regular expression)
+        # to find and match the string but it can introduce some complexities.
         # Here, I am using standard python method for simplicity.
-        # Although I am pretty sure that this is not the fastest solution
+        # Although I am pretty sure that this is not the efficient solution
         # and I think this can me implmented in more sophisticated ways.
         must_string_checks_list = []
         for string in website_reqrmnt.get('must_contain'):
